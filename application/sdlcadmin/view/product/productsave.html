@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>网站设置</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="__LAYUI__/css/layui.css" media="all">
+  <link href="__ADMIN__/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+  <link href="__ADMIN__/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+  <link href="__ADMIN__/css/animate.min.css" rel="stylesheet">
+  <link href="__ADMIN__/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+  <script src="__ADMIN__/js/jquery.min.js?v=2.1.4"></script>
+  <script src="__ADMIN__/js/ajaxfileupload.js"></script>
+  <style>
+    .layui-fluid{padding:15px}
+  </style>
+</head>
+<body>
+
+  <div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+      <div class="layui-col-md12">
+        <form class="layui-form" action="" lay-filter="component-form-group" method="post" data-type="ajax">
+        <div class="layui-card">
+          <div class="layui-card-body" pad15>
+
+            <div class="layui-form" wid100 lay-filter="">
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">产品分类</label>
+                <div class="layui-input-inline sjzzdy" style="width:270px;">
+                  <select name="product_classify_id" lay-reqtext="上级组织单元是必填项，岂能为空？" style="width:270px;" lay-search>
+                      {volist name="classifyArr" id="v"}
+                          <option value="{$v.id}" {if condition="$getInfo.parent_id eq $v.id"}selected{/if}><?php echo str_repeat('- - ',$v["level"]);?>{$v.name}</option>
+                      {/volist}
+                  </select>
+                </div>
+              </div>
+
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">标题</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" value="{$getInfo.title}" class="layui-input">
+                </div>
+              </div>
+
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="width: 110px;">图片</label>
+                <div class="layui-input-block">
+                  <div id="file-pretty">
+                      <input id="file_path" name="file" type="file" class="form-control" style="display:none">
+                      <div class="input-append input-group">
+                          <span class="input-group-btn">
+                              <button id="btn_path" type="button" class="btn btn-white">上传图片</button>
+                          </span>
+                          <input id="info_path" type="text" name='picimg' class="form-control input-large" value="{$getInfo.picimg}">
+                      </div>
+                      <br>
+                  </div>
+                  <script type="text/javascript">
+                      $(function(){
+                          $('#btn_path').click(function(){
+                              $("#file_path").click();
+                          });
+
+                          //异步上传
+                          $("body").delegate("#file_path", 'change', function(){
+                              var filepath = $("input[name='file']").val();
+                              var arr = filepath.split('.');
+                              var ext = arr[arr.length-1];//图片后缀
+
+                              if('gif|jpg|png|bmp'.indexOf(ext)>=0){
+                                  $.ajaxFileUpload({
+                                     url: '{:url('common/upload_image')}',
+                                     type: 'post',
+                                     data: { name: 'file' },
+                                     secureuri: false,
+                                     fileElementId: 'file_path',
+                                     dataType: 'json',
+                                     success: function (data, status) {
+                                         $('#info_path').val(data);
+                                         $('#info_path').focus();
+                                     },
+                                     error: function (data, status, e){
+                                         layer.alert('上传失败');
+                                     }
+                                  });
+                              }else{
+                                  // 清空file
+                                  $('#file_path').val('');
+                                  layer.alert('请上传合适的图片类型');
+                              }
+                          });
+                      });
+                  </script>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">状态</label>
+                <div class="layui-input-block">
+                  <input type="checkbox" {if condition="$getInfo['status'] eq 'on'"}checked=""{/if}{if condition="$getInfo[id] eq '0'"}checked{/if} name="status" lay-skin="switch" lay-filter="switchTest" lay-text="ON|OFF" >
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <div class="layui-input-block">
+                  <input type="hidden" name="id" value="{if condition='$getInfo.id neq 0'}{$getInfo['id']}{/if}">
+                  <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                  <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                  <a  class="layui-btn layui-btn-normal layui-btn-radius" onclick="javascript:history.go(-1);">返回</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="__ADMIN__/js/plugins/layer/layer.min.js"></script>
+  <script src="__LAYUI__/layui.js" charset="utf-8"></script>
+  <script src="__LAYUI__/layer_hplus.js" charset="utf-8"></script>
+  <script src="__ADMIN__/js/bootstrap.min.js?v=3.3.6"></script>
+  <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+  <script>
+  layui.use(['form', 'layedit', 'laydate'], function(){
+    var form = layui.form
+    ,laydate = layui.laydate;
+
+    //日期
+    laydate.render({
+      elem: '#date1'
+    });
+
+
+    //监听指定开关
+    form.on('switch(switchTest)', function(data){
+      layer.msg('状态：'+ (this.checked ? '开启' : '禁用'), {
+        offset: '6px'
+      });
+      //layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+    });
+
+  });
+  </script>
+
+</body>
+</html>

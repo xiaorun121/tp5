@@ -1,0 +1,40 @@
+{extend name="common/base" /}
+
+{block name="title"}新闻中心{/block}
+
+{block name="left"}
+<div class="categoriess">
+      <h1>新闻栏目</h1>
+      <div>
+          <ul  >
+            <li><a href="/news?type=热门">热门文章</a></li><li><a href="/news?type=最新">最新文章</a></li>
+
+            </ul>
+        </div>
+    </div>
+{/block}
+
+{block name="right"}
+<div class="rightn">
+    <div class="pppp"><span>{if $type}{$type}文章{else/}新闻中心{/if}</span>
+      <div>当前位置： <a href='/'>首页</a> >  <a class=" > " href="/news">新闻中心</a></div>
+    </div>
+    <div class="content_p">
+      <div class="act_content">
+        <!--当前位置-->
+        <!--文章列表-->
+        <div class="act_list">
+          <ul>
+            {volist name="newsinfo" id="v"}
+                <li style="float:none; width:100%;"><a href="/newsarticle?id={$v.id}" target="_blank" style="color:#000;">{$v.title}</a><span style="float:right;">{$v.create_time|mb_substr=0,10,'utf-8'}</span></li>
+            {/volist}
+          </ul>
+        </div>
+        <!--分页-->
+        <div class="pages">
+            {$newsinfo->render()}
+        </div>
+      </div>
+    </div>
+</div>
+{/block}

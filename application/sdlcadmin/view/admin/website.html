@@ -1,0 +1,204 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>网站设置</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="__LAYUI__/css/layui.css" media="all">
+  <link href="__ADMIN__/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+  <link href="__ADMIN__/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+  <link href="__ADMIN__/css/animate.min.css" rel="stylesheet">
+  <link href="__ADMIN__/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+  <script src="__ADMIN__/js/jquery.min.js?v=2.1.4"></script>
+  <script src="__ADMIN__/js/ajaxfileupload.js"></script>
+  <script src="__ADMIN__/plugins/ueditor/ueditor.config.js"></script>
+  <script src="__ADMIN__/plugins/ueditor/ueditor.all.min.js"></script>
+  <style>
+    .layui-fluid{padding:15px}
+  </style>
+</head>
+<body>
+
+  <div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+      <div class="layui-col-md12">
+        <form class="layui-form" action="" lay-filter="component-form-group" method="post" data-type="ajax">
+        <div class="layui-card">
+          <div class="layui-card-header">网站设置</div>
+          <div class="layui-card-body" pad15>
+
+            <div class="layui-form" wid100 lay-filter="">
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">网站名称</label>
+                <div class="layui-input-block">
+                  <input type="text" name="name" value="{$info.name}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">网站域名</label>
+                <div class="layui-input-block">
+                  <input type="text" name="url" lay-verify="url" value="{$info.url}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="width: 110px;">首页标题</label>
+                <div class="layui-input-block">
+                  <textarea name="title" class="layui-textarea">{$info.title}</textarea>
+                </div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="width: 110px;">META关键词</label>
+                <div class="layui-input-block">
+                  <textarea name="keywords" class="layui-textarea" placeholder="多个关键词用英文状态 , 号分割">{$info.keywords}</textarea>
+                </div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="width: 110px;">META描述</label>
+                <div class="layui-input-block">
+                  <textarea name="description" class="layui-textarea">{$info.description}</textarea>
+                </div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="width: 110px;">版权信息</label>
+                <div class="layui-input-block">
+                  <textarea name="copyright" class="layui-textarea">{$info.copyright}</textarea>
+                </div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="width: 110px;">网站logo</label>
+                <div class="layui-input-block">
+                  <div id="file-pretty">
+                      <input id="file_path" name="file" type="file" class="form-control" style="display:none">
+                      <div class="input-append input-group">
+                          <span class="input-group-btn">
+                              <button id="btn_path" type="button" class="btn btn-white">上传图片</button>
+                          </span>
+                          <input id="info_path" type="text" name='logo' class="form-control input-large" value="{$info.logo}">
+                      </div>
+                      <br>
+                      {if $info.logo}
+                      <img src="__UPLOADS__/{$info.logo}" width="50%" height="100px" />
+                      {/if}
+                  </div>
+                  <script type="text/javascript">
+                      $(function(){
+                          $('#btn_path').click(function(){
+                              $("#file_path").click();
+                          });
+
+                          //异步上传
+                          $("body").delegate("#file_path", 'change', function(){
+                              var filepath = $("input[name='file']").val();
+                              var arr = filepath.split('.');
+                              var ext = arr[arr.length-1];//图片后缀
+
+                              if('gif|jpg|png|bmp'.indexOf(ext)>=0){
+                                  $.ajaxFileUpload({
+                                     url: '{:url('upload_image')}',
+                                     type: 'post',
+                                     data: { name: 'file' },
+                                     secureuri: false,
+                                     fileElementId: 'file_path',
+                                     dataType: 'json',
+                                     success: function (data, status) {
+                                         $('#info_path').val(data);
+                                         $('#info_path').focus();
+                                     },
+                                     error: function (data, status, e){
+                                         layer.alert('上传失败');
+                                     }
+                                  });
+                              }else{
+                                  // 清空file
+                                  $('#file_path').val('');
+                                  layer.alert('请上传合适的图片类型');
+                              }
+                          });
+                      });
+                  </script>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">联系人</label>
+                <div class="layui-input-block">
+                  <input type="text" name="contacts" value="{$info.contacts}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">联系方式</label>
+                <div class="layui-input-block">
+                  <input type="text" name="contact_information" value="{$info.contact_information}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">座机</label>
+                <div class="layui-input-block">
+                  <input type="text" name="landline" value="{$info.landline}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">微信</label>
+                <div class="layui-input-block">
+                  <input type="text" name="wechat" value="{$info.wechat}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">QQ</label>
+                <div class="layui-input-block">
+                  <input type="text" name="qq" value="{$info.qq}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">厂址</label>
+                <div class="layui-input-block">
+                  <input type="text" name="factory_address" value="{$info.factory_address}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 110px;">地址</label>
+                <div class="layui-input-block">
+                  <input type="text" name="address" value="{$info.address}" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="width: 110px;">公司简介</label>
+                <div class="layui-input-block">
+                  <textarea name="about" id="content" class="" >{if $info['about']}{$info['about']}{/if}</textarea>
+                </div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="width: 110px;">联系我们</label>
+                <div class="layui-input-block">
+                  <textarea name="contact_us" id="contact_us" class="" >{if $info['contact_us']}{$info['contact_us']}{/if}</textarea>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <div class="layui-input-block">
+                  <button class="layui-btn" type="submit" lay-submit lay-filter="set_website">确认保存</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="__ADMIN__/js/plugins/layer/layer.min.js"></script>
+  <script src="__LAYUI__/layui.js" charset="utf-8"></script>
+  <script src="__LAYUI__/layer_hplus.js" charset="utf-8"></script>
+  <script src="__ADMIN__/js/bootstrap.min.js?v=3.3.6"></script>
+  <script>
+     UE.getEditor('content',{initialFrameHeight:500,initialFrameWidth:1500});
+     UE.getEditor('contact_us',{initialFrameHeight:500,initialFrameWidth:1500});
+
+  </script>
+</body>
+</html>

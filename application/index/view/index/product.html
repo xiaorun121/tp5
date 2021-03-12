@@ -1,0 +1,22 @@
+{extend name="common/base" /}
+
+{block name="title"}产品中心{/block}
+
+
+{block name="right"}
+  <div class="rightn">
+      <div class="pppp"><span>{if $productClassifyToName}{$productClassifyToName}{else/}产品展示{/if}</span>
+        <div>当前位置： {$html}</div>
+      </div>
+      <ul class="list_img list_img_main">
+          {volist name="productInfo" id="v"}
+              <li><a href="/productarticle?id={$v.id}" target="_blank"><img src="__UPLOADS__/{$v.picimg}" alt="{$v.title}" /></a><dl style="line-height:40px; text-align:center;font-size:14px;">{$v.title}</dl></li>
+          {/volist}
+      </ul>
+    <!--分页-->
+    <div class="pages">
+        {$productInfo->render()}
+    </div>
+
+  </div>
+{/block}

@@ -1,0 +1,93 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link  type="text/css" href="__INDEX__/css/style.css" rel="stylesheet"/>
+<title>{block name="title"}{/block}-{$config.title}</title>
+</head>
+<body>
+<div class="header">
+ <div id="huanying"><p> </p></div>
+	<div class="top">
+    	<div class="logo"><img  src="{$config.logo}"/></div>
+       <div class="nav">
+	<ul>
+    	<li><a href="/" class="index_home" style="color:#fff;">网站首页</a></li>
+    	<li><a href="/about">公司简介</a></li><li><a href="/product">产品展示</a></li><li><a href="/news">新闻中心</a></li><li><a href="/contact">联系我们</a></li>
+    </ul>
+</div>
+
+	</div>
+
+</div>
+
+<p style="height:350px; background:url(__INDEX__/images/banner4.jpg) no-repeat center;"></p>
+    <!-- 代码 结束 -->
+<div class="center bgcolor">
+	<div class="center_left index_left ">
+    {block name="left"}
+    	<div class="categoriess">
+     <h1>产品分类</h1>
+        	<div>
+            	 <ul>
+                  {volist name="productArr" id="v"}
+
+                      {if condition="$v.level eq 0"}
+                          <p><a href="/product?id={$v.id}">{$v.name}</a></p>
+                      {else/}
+                          <li><a href="/product?id={$v.id}">{$v.name}</a></li>
+                      {/if}
+                  {/volist}
+
+            </ul>
+           	</div>
+       	</div>
+        {/block}
+
+        <div class="index_linkk top_indent">
+        	<h1>联系我们</h1>
+          <div class="link_bg">
+              <p>地址: {$config.address}</p>
+              <p>电话：{$config.landline}</p>
+              <p>手机：{$config.contact_information}</p>
+              <p>厂址：{$config.factory_address}</p>
+              <p>联系人：{$config.contacts}</p>
+          </div>
+        </div>
+   	</div>
+
+    {block name="right"}
+
+    {/block}
+
+</div>
+
+<div class="footer">
+
+
+<div id="footernei">
+
+<div class="navv">
+	<ul>
+    <li><a href="/">网站首页</a></li>
+    	<li><a href="/about">公司简介</a></li><li><a href="/product">产品展示</a></li><li><a href="/news">新闻中心</a></li><li><a href="/contact">联系我们</a></li>
+    </ul>
+</div>
+
+	<div class="copyright">
+    {$config.copyright} 综合性
+    <b>
+      <a href="http://www.sdlichang.com/" target="_blank">交通设施生产厂家</a>
+    </b> 以及<b><a href="http://www.sdlichang.com/" target="_blank">山东交通设施厂家</a></b>
+    <br />
+联 系 人：{$config.contacts} 移动电话：{$config.contact_information} 座机：{$config.landline} 地址：{$config.address} <br />
+<img style="width:100px;height:30px;" src="__INDEX__/images/1.png" />
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261958343'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1261958343%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<a href="http://www.sdlichang.com/zhizhao.html" target="_blank"> <img src="__INDEX__/images/qyrz.jpg" /></a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,964 @@
+[ 2021-03-12T10:35:28+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.009404s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.011361s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.001737s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.003349s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.002688s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000878s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000575s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001649s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000214s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:35:45+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002773s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.002392s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001596s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.003947s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000883s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001580s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000164s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000151s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:35:49+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003322s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001619s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001414s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.004577s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001592s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000212s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002795s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.002130s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001452s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.004062s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001480s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000188s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:18+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002652s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001214s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001260s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.002524s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000983s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000191s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:23+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002678s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001145s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000895s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.001484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000737s ]
+[ sql ] [ SQL ] SELECT `p`.`role_id`,`p`.`menu_id`,`m`.`id`,`m`.`name`,`m`.`module_name`,`m`.`controller_name`,`m`.`view_name`,`m`.`parent_id`,`m`.`is_menu`,`m`.`sort` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `m`.`is_menu` = 1  AND (  m.delete_time is null ) ORDER BY m.sort asc [ RunTime:0.001522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.002665s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 1  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 7  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 5  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 6  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 104  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 106  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 107  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 105  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 108  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 118  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 119  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 123  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 124  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000429s ]
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:23+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.007752s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001021s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.002529s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.002525s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.002135s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000660s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:23+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002578s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000673s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:25+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002821s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.002950s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.004626s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001097s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000159s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002783s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001075s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.002633s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.005056s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SELECT `p`.`role_id`,`p`.`menu_id`,`m`.`id`,`m`.`name`,`m`.`module_name`,`m`.`controller_name`,`m`.`view_name`,`m`.`parent_id`,`m`.`is_menu`,`m`.`sort` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `m`.`is_menu` = 1  AND (  m.delete_time is null ) ORDER BY m.sort asc [ RunTime:0.000819s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000754s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 1  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.002274s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 7  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000632s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 5  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 6  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 104  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 106  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.001772s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 107  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 105  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 108  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.001186s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 118  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000653s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 119  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 123  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 124  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.001724s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000517s ]
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003289s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001209s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001179s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.002881s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001320s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.002069s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000760s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.006558s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001050s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001115s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000632s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002647s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001042s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000772s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001265s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_role` WHERE  `sdlc_role`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `sdlc_role`.`delete_time` IS NULL ORDER BY sort asc,id asc LIMIT 0,20 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'Role'  AND `view_name` = 'rlist' LIMIT 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 6 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (50,46,45,44) [ RunTime:0.000425s ]
+[ error ] [8]Use of undefined constant 角色新增 - assumed '角色新增'
+[ error ] [8]未定义变量: name
+[ error ] [8]Use of undefined constant 权限分配 - assumed '权限分配'
+[ error ] [8]Use of undefined constant 角色修改 - assumed '角色修改'
+[ error ] [8]Use of undefined constant 角色删除 - assumed '角色删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002956s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.002776s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.002260s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.002944s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.005175s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.001468s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001130s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.001509s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.001371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001693s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000174s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:36:57+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003344s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001829s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001938s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.007661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001778s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.003192s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.003705s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000301s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:37:30+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002771s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001560s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001547s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001454s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001395s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000164s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:37:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003949s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.002267s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT `p`.`role_id`,`p`.`menu_id`,`m`.`id`,`m`.`name`,`m`.`module_name`,`m`.`controller_name`,`m`.`view_name`,`m`.`parent_id`,`m`.`is_menu`,`m`.`sort` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `m`.`is_menu` = 1  AND (  m.delete_time is null ) ORDER BY m.sort asc [ RunTime:0.000816s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.002644s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 1  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 7  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 5  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 6  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 104  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 106  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 107  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 105  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 108  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000696s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 118  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 119  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000801s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 123  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 124  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.001708s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000509s ]
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+
+---------------------------------------------------------------
+[ 2021-03-12T10:37:34+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003271s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.002087s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000868s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000868s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.001844s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000509s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:37:34+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002638s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.000874s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.003049s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.002766s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:37:36+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002563s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001003s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.003344s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.001691s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.001274s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001137s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000167s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000154s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:38:02+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002869s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001037s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000788s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001290s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001199s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000166s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000151s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:38:46+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002992s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000765s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001045s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000932s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.004592s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000900s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000208s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:38:57+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002897s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001054s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.004234s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001043s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000712s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000857s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.003064s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001517s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000253s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:40:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002880s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001228s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000782s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001180s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000838s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000174s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000183s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:40:41+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003475s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001178s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000774s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000598s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000848s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000190s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:07+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002853s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001088s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000832s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000840s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.005338s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000913s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000184s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002707s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001018s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000752s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000956s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000612s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001416s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000171s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000175s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:42+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002690s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001350s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000935s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000596s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.005062s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000702s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000863s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000172s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:44+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.006367s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001278s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000879s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000900s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000908s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001060s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `sdlc_role`.`delete_time` IS NULL ORDER BY sort asc [ RunTime:0.002349s ]
+[ error ] [8]Use of undefined constant sex - assumed 'sex'
+[ error ] [8]Use of undefined constant sex - assumed 'sex'
+[ error ] [8]Use of undefined constant id - assumed 'id'
+[ error ] [8]Use of undefined constant id - assumed 'id'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:47+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002919s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000820s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001326s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.006302s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000194s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:57+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002662s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001106s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `username` = 'xiaorun'  AND (  delete_time is null ) LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] UPDATE `sdlc_user`  SET `login_time`='2021-03-12 10:41:56'  WHERE  `id` = 7 [ RunTime:0.250709s ]
+[ sql ] [ SQL ] UPDATE `sdlc_user`  SET `login_num`=login_num+1  WHERE  `id` = 7 [ RunTime:0.013434s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:57+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002727s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.002146s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 7 LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT `p`.`role_id`,`p`.`menu_id`,`m`.`id`,`m`.`name`,`m`.`module_name`,`m`.`controller_name`,`m`.`view_name`,`m`.`parent_id`,`m`.`is_menu`,`m`.`sort` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `m`.`is_menu` = 1  AND (  m.delete_time is null ) ORDER BY m.sort asc [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 1  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 7  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 5  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 6  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 104  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.003204s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 106  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 107  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 105  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 108  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 118  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 119  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 123  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 124  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.001387s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001075s ]
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:57+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003212s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001137s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 7 LIMIT 1 [ RunTime:0.000622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000994s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001476s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.001556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.001080s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000626s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:41:57+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.004517s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001113s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 7 LIMIT 1 [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.002319s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001017s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000654s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:08+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002720s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001034s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `username` = 'xiaorun'  AND `password` = '5b0c43268600c229f393af1a0475f429'  AND `id` = 7 LIMIT 1 [ RunTime:0.018776s ]
+[ sql ] [ SQL ] UPDATE `sdlc_user`  SET `username`='xiaorun',`password`='5b0c43268600c229f393af1a0475f429'  WHERE  `id` = 7 [ RunTime:0.000459s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002670s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001192s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `username` = 'admin'  AND (  delete_time is null ) LIMIT 1 [ RunTime:0.000804s ]
+[ sql ] [ SQL ] UPDATE `sdlc_user`  SET `login_time`='2021-03-12 10:42:13'  WHERE  `id` = 2 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] UPDATE `sdlc_user`  SET `login_num`=login_num+1  WHERE  `id` = 2 [ RunTime:0.000328s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002731s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000749s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT `p`.`role_id`,`p`.`menu_id`,`m`.`id`,`m`.`name`,`m`.`module_name`,`m`.`controller_name`,`m`.`view_name`,`m`.`parent_id`,`m`.`is_menu`,`m`.`sort` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `m`.`is_menu` = 1  AND (  m.delete_time is null ) ORDER BY m.sort asc [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 1  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 7  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 5  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 6  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 104  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 106  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 107  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 105  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 108  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002274s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 118  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 119  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT `menu_id` FROM `sdlc_permission` WHERE  `role_id` = 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 123  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) ORDER BY sort asc [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 124  AND `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127)  AND `is_menu` = 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.000879s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000363s ]
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+[ error ] [8]未定义数组索引: child
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003262s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001087s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001859s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000806s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.003490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_website` [ RunTime:0.001020s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_website` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000470s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003110s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001511s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000680s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001176s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000690s ]
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:16+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.005501s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.000948s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002627s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001172s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.001217s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000293s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:18+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002959s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.002585s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001867s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001648s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.001353s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `sdlc_role`.`delete_time` IS NULL ORDER BY sort asc [ RunTime:0.000733s ]
+[ error ] [8]Use of undefined constant sex - assumed 'sex'
+[ error ] [8]Use of undefined constant sex - assumed 'sex'
+[ error ] [8]Use of undefined constant id - assumed 'id'
+[ error ] [8]Use of undefined constant id - assumed 'id'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:20+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002727s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001112s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.001820s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001400s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000172s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000152s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:41+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003595s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_role` WHERE  `sdlc_role`.`delete_time` IS NULL ORDER BY sort asc [ RunTime:0.000393s ]
+[ error ] [8]Use of undefined constant sex - assumed 'sex'
+[ error ] [8]Use of undefined constant id - assumed 'id'
+[ error ] [8]Use of undefined constant id - assumed 'id'
+
+---------------------------------------------------------------
+[ 2021-03-12T10:42:44+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002666s ] mysql:dbname=shangdonglichang;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_user` [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_permission` [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_permission` WHERE  `sdlc_permission`.`delete_time` IS NULL  AND `role_id` = 1 [ RunTime:0.001024s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_menu` [ RunTime:0.001391s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `id` IN (1,7,5,41,42,43,6,44,45,46,50,4,47,48,49,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127) [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_user` WHERE  `sdlc_user`.`delete_time` IS NULL ORDER BY id asc LIMIT 0,20 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT `id` FROM `sdlc_menu` WHERE  `module_name` = 'sdlcadmin'  AND `controller_name` = 'User'  AND `view_name` = 'ulist' LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `sdlc_menu` WHERE  `parent_id` = 4 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`m`.`name` FROM `sdlc_permission` `p` INNER JOIN `sdlc_menu` `m` ON `p`.`menu_id`=`m`.`id` WHERE  `p`.`role_id` = 1  AND `p`.`menu_id` IN (49,48,47) [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sdlc_role` [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 1  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000165s ]
+[ sql ] [ SQL ] SELECT `name` FROM `sdlc_role` WHERE  `id` = 16  AND (  delete_time is  null ) LIMIT 1 [ RunTime:0.000171s ]
+[ error ] [8]Use of undefined constant 用户新增 - assumed '用户新增'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+[ error ] [8]Use of undefined constant 用户修改 - assumed '用户修改'
+[ error ] [8]Use of undefined constant 用户删除 - assumed '用户删除'
+
+---------------------------------------------------------------

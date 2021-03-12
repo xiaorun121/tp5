@@ -1,0 +1,46 @@
+{extend name="common/base" /}
+
+{block name="title"}{$info.title}{/block}
+
+{block name="right"}
+
+    <div class="rightn">
+        <div class="pppp"><span>{$productClassify.name}</span>
+          <div>当前位置： {$html}</div>
+        </div>
+
+
+
+
+
+
+
+        <div class="content_p">
+          <h1>{$info.title}</h1>
+          <!--文章信息-->
+          <div class="act_info"><span>时间:</span>{$info.create_time|mb_substr=0,10,'utf-8'}<span>来源:</span>{$config.title}<span>作者:</span>{:showUser($info.user_id)}<span>点击:{$info.click}</span>次</div>
+          <!--文章导读-->
+          <div class="act_neirong">
+              <div style="text-align:center;"><img src="__UPLOADS__/{$info.picimg}" alt="" style="line-height:1.5;" /></div> </div>
+          <div class="pages"> 下一篇：{if $next}<a href="/productarticle?id={$next.id}" title="{$next.title}">{$next.title}{else/}没有了{/if}</a>上一篇：{if $prv}<a href="/productarticle?id={$prv.id}" title="{$prv.title}">{$prv.title}{else/}没有了{/if} </div>
+        </div>
+
+        <div id="xiangguan">
+
+        <h2>相关新闻</h2>
+        <div class="act_li">
+              <ul>
+                  {volist name="newsInfo" id="v"}
+                      <li style="float:none; width:100%;"><a href="newsarticle?id={$v.id}" target="_blank" style="color:#000;">{$v.title}</a><span style="float:right;">{$v.create_time|mb_substr=0,10,'utf-8'}</span></li>
+                  {/volist}
+              </ul>
+            </div>
+
+
+
+
+        </div><!--xiangguan-->
+
+    </div><!--right-->
+
+{/block}
